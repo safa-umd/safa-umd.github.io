@@ -24,7 +24,8 @@ body {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
     margin-bottom: 1.75rem;
 }
 
@@ -40,7 +41,6 @@ p {
 }
 
 .button-group .btn {
-    font-family: Arial, sans-serif;
     display: inline-block;
     text-decoration: none;
     padding: 15px 35px;
