@@ -139,3 +139,38 @@ p {
     height: auto;
     margin: 1rem 0;
 }
+
+@media (max-width: 600px) {
+    .container {
+        padding: 1.5rem;
+        width: 95%;
+        margin: 1rem auto;
+        border-width: 0.25rem;
+        box-shadow: 0 0 1.5rem 0.25rem #0C3178;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .button-group .btn {
+        display: block;
+        width: 100%;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        margin: 0.3rem auto;
+    }
+
+    .logo {
+        max-width: 90%;
+        margin: 1rem auto;
+    }
+}
