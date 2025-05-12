@@ -40,7 +40,7 @@ p {
 }
 
 .button-group .btn {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     display: inline-block;
     text-decoration: none;
     padding: 15px 35px;
