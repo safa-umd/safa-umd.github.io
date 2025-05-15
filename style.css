@@ -28,28 +28,27 @@ body {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2.75rem;
     color: white;
     text-shadow: 0.25rem 0.25rem 0.625rem #3b3b3b;
 }
 
 h2 {
+    font-size: 1.75rem;
+    color: white;
+    line-height: 1.5;
+}
+
+h3 {
     font-size: 1.5rem;
     color: white;
     line-height: 1.5;
-    margin: 1rem;
 }
 
 p {
-    font-size: 1.3rem;
-    margin: 1rem;
+    font-size: 1.4rem;
     color: white;
-}
-
-.bullet-point {
-    font-size: 1.3rem;
-    color: white;
-    margin: 0.5rem 0;
+    line-height: 1.3;
 }
 
 .button-group .btn {
@@ -88,7 +87,6 @@ a:hover {
 .logo {
     max-width: 100%;
     height: auto;
-    margin: 1rem 0;
 }
 
 @media (max-width: 600px) {
