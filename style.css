@@ -109,6 +109,7 @@ a:hover {
 
 .calendar {
     width: 100%;
+    max-width: 60rem;
     height: 40rem;
 }
 
