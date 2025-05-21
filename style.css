@@ -89,6 +89,20 @@ a:hover {
     height: auto;
 }
 
+.social-media {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center ;
+    gap: 1rem;
+}
+
+.icon {
+    width: 15rem;
+    height: 15rem;
+    transition: transform 0.3s ease;
+    margin: 0.5rem;
+}
+
 @media (max-width: 600px) {
     .container {
         padding: 1.5rem;
