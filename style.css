@@ -103,6 +103,10 @@ a:hover {
     margin: 0.5rem;
 }
 
+.icon:hover {
+    transform: scale(1.2);
+}
+
 @media (max-width: 600px) {
     .container {
         padding: 1.5rem;
@@ -141,4 +145,10 @@ a:hover {
         max-width: 90%;
         margin: 1rem auto;
     }
+    .icon {
+        width: 10rem;
+        height: 10rem;
+        margin: 0.25rem;
+    }
+
 }
