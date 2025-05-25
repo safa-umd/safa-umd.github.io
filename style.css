@@ -167,10 +167,16 @@ a:hover {
         max-width: 90%;
         margin: 1rem auto;
     }
+
     .icon {
         width: 10rem;
         height: 10rem;
         margin: 0.25rem;
     }
 
+    .picture {
+        width: 20rem;
+        height: 20rem;
+        margin: 0.25rem;
+    }
 }
