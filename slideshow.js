@@ -1,8 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
     //array of google drive image urls
     const imageURLs = [
-        "https://drive.google.com/uc?export=view&id=163xapG0erReL2KedIAgxpby8kfkSQjcO",
-        "https://drive.google.com/uc?export=view&id=1XlK2ocKkSNI864YaGZtwbY3twnPmwoen"
+        "slideshow-photos/1.jpg",
+        "slideshow-photos/2.jpg",
+        "slideshow-photos/3.jpg",
+        "slideshow-photos/4.jpg",
+        "slideshow-photos/5.jpg",
+        "slideshow-photos/6.jpg",
+        "slideshow-photos/7.jpg",
     ]
 
     let currentIndex = 0;
