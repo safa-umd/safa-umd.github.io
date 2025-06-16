@@ -1,43 +1,3 @@
-const delay = 3000; //wait 3 secs before image
-let currentIndex = 0; //index of first image
-
-async function loadSlideshow() {
-    try {
-        const response = await fetch('images.json');
-        const { images } = await response.json();
-        const slideshowImage = document.getElementById('slideshowView');
-        slideshowImage.innerHTML = ''; // clear any existing content
-
-        //add all images to the page
-        images.forEach((imgPath, index) => {
-            const img = document.createElement('img');
-            img.src = imgPath;
-            img.style.display = index === 0 ? 'block' : 'none'; // show only the first image initially
-            img.classList.add('slideshow-image'); // add a class for styling
-            slideshowImage.appendChild(img);
-        });
-
-        //start slideshow if any images exist
-        if (images.length > 0) {
-            setInterval(showNextImage, delay);
-        }
-    }
-    catch (error) {
-        console.error('Error loading images:', error); 
-    }
-}
-
-function showNextImage() {
-    const imgs = document.querySelectorAll('.slideshow-image');
-    if (imgs.length === 0) return; // No images to show
-
-    imgs[currentIndex].style.display = 'none'; // hide current image
-    currentIndex = (currentIndex + 1) % imgs.length; // move to the next image
-    imgs[currentIndex].style.display = 'block'; // show next image
-}
-window.onload = loadSlideshow; // ensure the slideshow starts when the page loads
-
-/*
 document.addEventListener("DOMContentLoaded", function() {
     //current number of images in the folder, update accordingly
     var numImages = 8;
@@ -67,4 +27,3 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 });
-*/
