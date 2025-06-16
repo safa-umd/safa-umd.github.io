@@ -10,8 +10,13 @@ jobs:
         steps:
             - uses: actions/checkout@v4
 
-            - name: Generate JSON file
+            - name: Generate JSON
               run: |
-                    #list all images and create JSON file for them
-                    IMAGES=$(ls images/*.{jpg, jpeg, png, gif, webp} | jq -R -s -c 'split("\n")[:-1]')
-                    echo "{\"images\": $IMAGES}" > images.json
+                # Check if images exist first
+                if [ -d "images" ]; then
+                IMAGES=$(find images -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.gif" -o -iname "*.webp" \) | jq -R -s -c 'split("\n")[:-1]')
+                echo "{\"images\": $IMAGES}" > images.json
+                else
+                echo "No 'images' directory found. Creating empty JSON."
+                echo '{"images": []}' > images.json
+                fi
