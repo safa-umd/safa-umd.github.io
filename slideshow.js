@@ -1,14 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
-    //array of google drive image urls
-    const imageURLs = [
-        "slideshow-photos/1.jpg",
-        "slideshow-photos/2.jpg",
-        "slideshow-photos/3.jpg",
-        "slideshow-photos/4.jpg",
-        "slideshow-photos/5.jpg",
-        "slideshow-photos/6.jpg",
-        "slideshow-photos/7.jpg",
-    ]
+    var numImages = 8;
+    const imageURLs = []
+    
+    for (let i = 0; i < numImages; i++) {
+        imageURLs[i] = "slideshow-photos/" + (i+1) + ".jpg";
+    }
+    
 
     let currentIndex = 0;
     const slideshowImage = document.getElementById('currentImage');
