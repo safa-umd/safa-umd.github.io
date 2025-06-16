@@ -1,0 +1,25 @@
+name: Update Images
+on:
+    push:
+        paths:
+            - 'images/**'
+    workflow_dispatch:
+jobs:
+    update-images:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: Generate JSON file
+              run: |
+                    #list all images and create JSON file for them
+                    IMAGES=$(ls images/*.{jpg, jpeg, png, gif, webp} | jq -R -s -c 'split("\n")[:-1]')
+                    echo "{\"images\": $IMAGES}" > images.json
+
+            - name: Commit Changes
+              run: |
+                    git config --local user.name "GitHub Actions"
+                    git config --local user.email "actions@github.com"
+                    git add images.json
+                    git commit -m "Update images.json" || echo "No changes"
+                    git push
