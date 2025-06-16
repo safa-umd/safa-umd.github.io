@@ -22,4 +22,5 @@ jobs:
                     git config --local user.email "actions@github.com"
                     git add images.json
                     git commit -m "Update images.json" || echo "No changes"
-                    git push
+                    git push "https://${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:main
+                    
