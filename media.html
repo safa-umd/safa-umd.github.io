@@ -25,7 +25,26 @@
         <div class="slideshows">
             <img id="currentImage" src="" alt="Slideshow Image" class="slideshow-image">
         </div>
-        <script src="scripts/slideshow.js" defer></script>
+        <script src="filenames.js"></script>
+        <script>
+            let index = 0;
+            //connect to the <img> element with the 'currentImage' id
+            const imageElement = document.getElementById('currentImage');
+
+            function showNextImage() {
+                index = (index + 1) % images.length;
+                imageElement.src = images[index];
+            }
+
+            //make sure the images folder isn't empty
+            if (images.length > 0) {
+                //show the first image always
+                imageElement.src = images[0];
+                //begin looping
+                setInterval(showNextImage, 3000);
+            }
+
+        </script>
         <p style="color: #084477">⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆</p>
         <h2 style="color: #3dbedb">Want to See More Content? Have Any Questions or Concerns?</h2>
         <h3 class="no-bold"><span style="color: #2B8FF0">☆</span> Visit the SAFA General Body <a href="https://drive.google.com/drive/folders/1hWvu9G7rdfbVRVvDxXFydsgRKo66jQoP" target="_blank">Google Drive (Old)</a>
