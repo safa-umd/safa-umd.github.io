@@ -2,7 +2,7 @@ import os
 import json
 
 image_directory = "images"
-output_file = "filenames.js"
+output_file = "scripts/filenames.js"
 
 images = [
     os.path.join(image_directory, f).replace("\\", "/")
