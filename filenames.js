@@ -5,6 +5,7 @@ const images = [
   "images/12.jpg",
   "images/13.jpg",
   "images/14.jpg",
+  "images/15.jpg",
   "images/2.jpg",
   "images/3.jpg",
   "images/4.jpg",
